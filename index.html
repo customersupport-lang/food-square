@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Square | Your Everyday Store</title>
+<meta name="description" content="Food Square - 20 M.N.K Road, Baranagar, Kolkata. Snacks, confectionery, biscuits, groceries, ice cream, pasta and cold drinks.">
+<style>
+:root{--red:#a90000;--deep:#760000;--cream:#fbefeb;--ink:#241b19;--muted:#6f615d;--line:#eadbd6;--green:#168447}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{text-decoration:none}.top{background:var(--deep);color:#fff;text-align:center;padding:7px 12px;font-size:13px}.top a{color:#fff;text-decoration:underline;font-weight:700}
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 3px 18px #30000018;border-bottom:1px solid var(--line)}.nav{height:84px;width:min(1180px,94%);margin:auto;display:flex;align-items:center}.logo{width:205px;max-height:72px;object-fit:contain;display:block}.links{margin-left:auto;display:flex;align-items:center;gap:26px;font-weight:700}.links a{color:#281f1d}.links a:hover{color:var(--red)}.wa{background:var(--red);color:#fff!important;padding:10px 16px;border-radius:999px}.menu{display:none;margin-left:auto;font-size:28px;background:none;border:0}
+.hero{position:relative;min-height:610px;display:flex;align-items:center;overflow:hidden;background:#2c0503}.hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,#240000df 0%,#240000a0 43%,#2400002b 100%),url("assets/food-square-storefront.png") center/cover}.hero-inner{position:relative;width:min(1180px,94%);margin:auto;color:#fff;padding:90px 0}.tag{display:inline-block;border:1px solid #ffffff55;background:#ffffff18;border-radius:999px;padding:7px 13px;font-size:12px;font-weight:800;letter-spacing:1px}.hero h1{font-size:clamp(42px,6vw,70px);line-height:1.03;max-width:760px;margin:18px 0}.hero p{max-width:650px;font-size:19px;color:#fff4ef}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{padding:13px 20px;border-radius:10px;font-weight:800;display:inline-block}.btn-white{background:#fff;color:var(--red)}.btn-outline{color:#fff;border:1px solid #fff}.btn-red{background:var(--red);color:#fff}.btn-green{background:var(--green);color:#fff}
+section{padding:78px 0}.container{width:min(1180px,94%);margin:auto}.heading{text-align:center;max-width:720px;margin:0 auto 42px}.kicker{font-size:12px;letter-spacing:2px;font-weight:900;color:#cf3d2d}.heading h2{font-size:clamp(32px,4vw,46px);line-height:1.1;margin:8px 0 10px}.heading p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 15px 40px #3b110c0c}.icon{font-size:38px}.card h3{margin:8px 0 5px}.card p{margin:0;color:var(--muted);font-size:14px}
+.about{background:#fff}.about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}.store-img{width:100%;border-radius:22px;display:block;box-shadow:0 18px 50px #3a120a20}.checks{display:grid;gap:13px;margin:24px 0}.check{display:flex;gap:12px}.tick{width:28px;height:28px;border-radius:50%;background:#ffe1db;color:var(--red);display:grid;place-items:center;font-weight:900;flex:0 0 auto}
+.cta{background:linear-gradient(110deg,#8d0000,#c83223);color:#fff}.cta-grid{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{margin:0;color:#fff}.cta p{color:#ffe8e2}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.contact-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:0 15px 40px #3a120a0c}.contact-card .big{font-size:30px}.contact-card h3{margin:8px 0 5px}.contact-card p{color:var(--muted)}.contact-card a{color:var(--red);font-weight:800}.map{margin-top:30px;border-radius:20px;overflow:hidden;border:1px solid var(--line)}iframe{width:100%;height:350px;border:0;display:block}
+.review{max-width:800px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;box-shadow:0 15px 40px #3a120a0c}.stars{font-size:27px;letter-spacing:3px}.review p{color:var(--muted)}
+footer{background:#201514;color:#fff;padding:35px 0}.foot{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.foot-logo{width:180px;background:#fff;border-radius:10px}.foot p{color:#cdbfbb}
+.float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-size:25px;box-shadow:0 10px 28px #0004;z-index:60}
+@media(max-width:900px){.links{display:none}.menu{display:block}.grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.cta-grid{display:block}.hero{min-height:580px}}
+@media(max-width:560px){.logo{width:165px}.grid{grid-template-columns:1fr}.hero-inner{padding:70px 0}.hero p{font-size:17px}section{padding:60px 0}}
+</style>
+</head>
+<body>
+<div class="top">📍 20, M.N.K Road, Baranagar, Kolkata – 700036 &nbsp; • &nbsp; 📞 <a href="tel:+916289827571">6289827571</a></div>
+
+<header><div class="nav">
+<a href="#home"><img class="logo" src="assets/food-square-logo.jpg" alt="Food Square logo"></a>
+<nav class="links">
+<a href="#home">Home</a><a href="#products">Our Products</a><a href="#about">About</a><a href="#contact">Contact</a>
+<a class="wa" href="https://wa.me/916289827571?text=Hello%20Food%20Square%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">WhatsApp Order</a>
+</nav>
+<button class="menu" onclick="toggleMenu()">☰</button>
+</div></header>
+
+<section id="home" class="hero"><div class="hero-bg"></div><div class="hero-inner">
+<div class="tag">🛒 YOUR NEIGHBOURHOOD STORE</div>
+<h1>Your Everyday Store for Snacks, Groceries & More</h1>
+<p>Confectionery, biscuits, groceries, ice cream, pasta, cold drinks and everyday essentials — convenient shopping in Baranagar.</p>
+<div class="buttons"><a class="btn btn-white" href="https://wa.me/916289827571?text=Hello%20Food%20Square%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">💬 Order on WhatsApp</a><a class="btn btn-outline" href="tel:+916289827571">📞 Call Now</a></div>
+</div></section>
+
+<section id="products"><div class="container"><div class="heading"><div class="kicker">SHOP AT FOOD SQUARE</div><h2>Our Products</h2><p>Everyday favourites and essentials, all in one place.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🍫</div><h3>Confectionery</h3><p>Chocolates, candies, sweets and snack-time favourites.</p></div>
+<div class="card"><div class="icon">🍪</div><h3>Biscuits</h3><p>Biscuits and cookies for tea time and everyday snacking.</p></div>
+<div class="card"><div class="icon">🛒</div><h3>Grocery</h3><p>Useful daily household and grocery essentials.</p></div>
+<div class="card"><div class="icon">🍦</div><h3>Ice Cream</h3><p>Chilled treats for a quick refreshment.</p></div>
+<div class="card"><div class="icon">🥤</div><h3>Cold Drinks</h3><p>Refreshing chilled beverages and soft drinks.</p></div>
+<div class="card"><div class="icon">🍝</div><h3>Pasta</h3><p>Convenient pasta options for quick meals.</p></div>
+<div class="card"><div class="icon">🧃</div><h3>Beverages</h3><p>Everyday drinks and refreshment choices.</p></div>
+<div class="card"><div class="icon">🧺</div><h3>Daily Essentials</h3><p>Convenient neighbourhood shopping for daily needs.</p></div>
+</div></div></section>
+
+<section id="about" class="about"><div class="container about-grid">
+<img class="store-img" src="assets/food-square-storefront.png" alt="Food Square storefront from supplied image">
+<div><div class="kicker">ABOUT FOOD SQUARE</div><h2>Your convenient neighbourhood store</h2>
+<p>Welcome to Food Square, your neighbourhood store in Baranagar, Kolkata. We offer a convenient range of confectionery, biscuits, groceries, ice cream, pasta, cold drinks and everyday essentials.</p>
+<div class="checks"><div class="check"><span class="tick">✓</span><div><b>Everyday shopping</b><br>Useful products for your daily needs.</div></div><div class="check"><span class="tick">✓</span><div><b>Easy ordering</b><br>Contact us quickly through WhatsApp or phone.</div></div><div class="check"><span class="tick">✓</span><div><b>Local store</b><br>20, M.N.K Road, Baranagar, Kolkata.</div></div></div>
+<a class="btn btn-red" href="https://wa.me/916289827571" target="_blank">Chat on WhatsApp</a></div>
+</div></section>
+
+<section><div class="container"><div class="heading"><div class="kicker">CUSTOMER FEEDBACK</div><h2>We'd Love Your Review</h2><p>Share your genuine experience with Food Square.</p></div>
+<div class="review"><div class="stars">★★★★★</div><p>Have you visited Food Square? Find our business on Google and leave your genuine review.</p><a class="btn btn-red" href="https://www.google.com/search?q=Food+Square+20+M.N.K+Road+Baranagar+Kolkata" target="_blank">Find Us on Google →</a></div></div></section>
+
+<section class="cta"><div class="container cta-grid"><div><div class="kicker" style="color:#ffd8cf">QUICK & EASY</div><h2>Need something from the shop?</h2><p>Send your requirement on WhatsApp or call us directly.</p></div><div class="buttons"><a class="btn btn-white" href="https://wa.me/916289827571" target="_blank">💬 WhatsApp Us</a><a class="btn btn-outline" href="tel:+916289827571">📞 6289827571</a></div></div></section>
+
+<section id="contact"><div class="container"><div class="heading"><div class="kicker">VISIT OR CONTACT US</div><h2>Food Square</h2><p>We're here for your everyday shopping needs.</p></div>
+<div class="contact-grid">
+<div class="contact-card"><div class="big">📍</div><h3>Visit Us</h3><p>20, M.N.K Road<br>Baranagar, Kolkata – 700036</p><a href="https://www.google.com/maps/search/?api=1&query=20%20M.N.K%20Road%2C%20Baranagar%2C%20Kolkata%20700036" target="_blank">Open Google Maps →</a></div>
+<div class="contact-card"><div class="big">📞</div><h3>Call Us</h3><p>6289827571<br>Speak to Food Square directly.</p><a href="tel:+916289827571">Call Now →</a></div>
+<div class="contact-card"><div class="big">💬</div><h3>WhatsApp</h3><p>Send your requirement or order enquiry.</p><a href="https://wa.me/916289827571" target="_blank">Start WhatsApp →</a></div>
+</div>
+<div class="map"><iframe loading="lazy" src="https://www.google.com/maps?q=20%20M.N.K%20Road%2C%20Baranagar%2C%20Kolkata%20700036&output=embed" title="Food Square location"></iframe></div>
+</div></section>
+
+<footer><div class="container foot"><div><img class="foot-logo" src="assets/food-square-logo.jpg" alt="Food Square logo"><p>Your everyday store for snacks, groceries & more.</p></div><div><p><b>Food Square</b></p><p>20, M.N.K Road, Baranagar, Kolkata – 700036</p><p>📞 6289827571</p></div><div><p>© 2026 Food Square</p><p>All Rights Reserved.</p></div></div></footer>
+
+<a class="float" href="https://wa.me/916289827571" target="_blank" aria-label="WhatsApp">💬</a>
+<script>
+function toggleMenu(){const n=document.querySelector('.links');n.style.display=n.style.display==='flex'?'none':'flex';n.style.flexDirection='column';n.style.position='absolute';n.style.top='84px';n.style.right='3%';n.style.background='#fff';n.style.padding='18px';n.style.borderRadius='12px';n.style.boxShadow='0 15px 40px #0002'}
+</script>
+</body>
+</html>
